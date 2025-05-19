@@ -1,26 +1,26 @@
 <div id="footer">
 	<div>
 		<ul class="navigation">
-			<li>
-				<a href="index.html">Home</a>
+			<li {{#if home}}class="active"{{/if}}>
+				<a href="/">Home</a>
 			</li>
-			<li class="active">
+			<li {{#if travel}}class="active"{{/if}}>
 				<a href="/travel">Travel</a>
 			</li>
-			<li>
-				<a href="rooms.html">Rooms</a>
+			<li {{#if isRooms}}class="active"{{/if}}>
+				<a href="/rooms">Rooms</a>
 			</li>
-			<li>
-				<a href="meals.html">Meals</a>
+			<li {{#if meals}}class="active"{{/if}}>
+				<a href="/meals">Meals</a>
 			</li>
-			<li>
-				<a href="news.html">News</a>
+			<li {{#if news}}class="active"{{/if}}>
+				<a href="/news">News</a>
 			</li>
-			<li>
-				<a href="about.html">About</a>
+			<li {{#if about}}class="active"{{/if}}>
+				<a href="/about">About</a>
 			</li>
-			<li>
-				<a href="contact.html">Contact</a>
+			<li {{#if contact}}class="active"{{/if}}>
+				<a href="/contact">Contact</a>
 			</li>
 		</ul>
 		<div id="connect">
