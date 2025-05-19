@@ -1,0 +1,23 @@
+[
+    {
+        "code": "FIRSTCLASS",
+        "name": "First Class Room",
+        "image": "images/first-class.jpg",
+        "description": "Experience our luxurious First Class Room. Cras dui sapien, feugiat vitae tristique ut, lobortis tempor orci. Donec pulvinar sagittis metus ut tristique. Pellentes que habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas idios.",
+        "rate": "220 / Day"
+    },
+    {
+        "code": "DELUXE",
+        "name": "Deluxe Room",
+        "image": "images/deluxe.jpg",
+        "description": "Stay in our comfortable Deluxe Room. Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis.",
+        "rate": "150 / Day"
+    },
+    {
+        "code": "SUITE",
+        "name": "Suite Room",
+        "image": "images/suite.jpg",
+        "description": "Enjoy our spacious Suite Room. Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis.",
+        "rate": "180 / Day"
+    }
+] 
