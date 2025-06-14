@@ -36,7 +36,57 @@ const tripsFindByCode = async (req, res) => {
     }
 };
 
+// POST: /trips - Adds a new Trip
+const tripsAddTrip = async (req, res) => {
+    const newTrip = new Model({
+        code: req.body.code,
+        name: req.body.name,
+        length: req.body.length,
+        start: req.body.start,
+        resort: req.body.resort,
+        perPerson: req.body.perPerson,
+        image: req.body.image,
+        description: req.body.description
+    });
+
+    try {
+        const trip = await newTrip.save();
+        return res.status(201).json(trip);
+    } catch (err) {
+        return res.status(400).json(err);
+    }
+};
+
+// PUT: /trips/:tripCode - Updates a trip
+const tripsUpdateTrip = async (req, res) => {
+    try {
+        const trip = await Model.findOneAndUpdate(
+            { 'code': req.params.tripCode },
+            {
+                name: req.body.name,
+                length: req.body.length,
+                start: req.body.start,
+                resort: req.body.resort,
+                perPerson: req.body.perPerson,
+                image: req.body.image,
+                description: req.body.description
+            },
+            { new: true }
+        ).exec();
+        
+        if (!trip) {
+            return res.status(404).json({ message: "Trip not found" });
+        }
+        
+        return res.status(200).json(trip);
+    } catch (err) {
+        return res.status(400).json(err);
+    }
+};
+
 module.exports = {
     tripsList,
-    tripsFindByCode
+    tripsFindByCode,
+    tripsAddTrip,
+    tripsUpdateTrip
 }; 
