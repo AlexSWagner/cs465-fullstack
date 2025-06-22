@@ -1,4 +1,4 @@
-<div style="margin-bottom: 30px;">
+<div style="margin-bottom: 30px;" *ngIf="isLoggedIn()">
   <button (click)="addTrip()" class="btn" style="background-color: #2a8a7d; color: white; font-size: 18px; padding: 12px 24px; border: none;">
     <i class="bi bi-plus-circle me-2"></i>Add Trip
   </button>
